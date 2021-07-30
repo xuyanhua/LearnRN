@@ -59,6 +59,11 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  // console.log("这是一条log");
+  // console.info("这是一条info log");
+  // console.warn("这是一条warn log");
+  // console.error("这是一条error log");
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
