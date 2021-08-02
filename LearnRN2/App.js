@@ -5,7 +5,6 @@
  * @format
  * @flow strict-local
  */
-
 import React, { Component } from 'react';
 import type { Node } from 'react';
 import { StyleSheet, Text, View, Dimensions, TextInput } from 'react-native';
