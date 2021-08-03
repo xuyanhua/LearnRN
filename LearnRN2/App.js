@@ -11,9 +11,15 @@ import { StyleSheet, Text, View, Dimensions, TextInput } from 'react-native';
 let widthOfMargin = Dimensions.get('window').width * 0.05;
 
 export default class App extends Component {
+    static myStaticVar = 'init value';
+    static myStaticMethod(){
+        console.log('myStaticMethod...')
+    }
     constructor(props) {
         super(props);
-
+        // 成员变量
+        // this.myProp1 = 'test';
+        // this.myProp2 = true;
         this.state = {
             inputNum: '',
             inputPW: ''
