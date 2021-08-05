@@ -39,13 +39,22 @@ class LoginLeaf extends Component {
       }
     })
   }
+  userPressConfirm() {
+    this.props.onLoginPressed(this.state.inputedNum, this.state.inputedPW);
+  }
+  userPressAddressBook() {
+
+  }
   render() {
     return (
       <View style={styles.contianer}>
         <TextInput placeholder={"请输入手机号"} style={styles.textInputStyle} onChangeText={(newText) => this.updateNum(newText)}></TextInput>
         <Text style={styles.textPromptStyle}>您的手机号是：{this.state.inputNum}</Text>
         <TextInput placeholder={"请输入密码"} secureTextEntry={true} style={styles.textInputStyle}></TextInput>
-        <Text style={styles.bigTextPromptStyle}>提交</Text>
+        <Text style={styles.bigTextPromptStyle}
+          onPress={() => this.userPressConfirm()}>确定</Text>
+        <Text style={styles.bigTextPromptStyle}
+          onPress={() => this.userPressAddressBook()}>通讯录</Text>
       </View>
     );
   }
